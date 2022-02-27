@@ -1,6 +1,5 @@
-
 import "./App.css";
-import Board from './Board';
+import Board from "./Board";
 
 const App = () => {
   return (
@@ -8,6 +7,6 @@ const App = () => {
       <Board />
     </div>
   );
-}
+};
 
 export default App;

@@ -1,4 +1,4 @@
-import Cell from './Cell';
+import Cell from "./Cell";
 import { Component } from "react";
 
 const validate = (board) => {
@@ -24,7 +24,7 @@ const validate = (board) => {
   return isValid;
 };
 
-class Board extends Component {
+export default class Board extends Component {
   state = {
     board: [
       [1, 2, 3, 4],
@@ -42,9 +42,11 @@ class Board extends Component {
   };
 
   submit = () => {
-    const isValid = validate(this.state.board)
-    this.setState({ statusText: isValid ? "Board is complete!!" : "Board is invalid!!" })
-  }
+    const isValid = validate(this.state.board);
+    this.setState({
+      statusText: isValid ? "Board is complete!!" : "Board is invalid!!",
+    });
+  };
 
   render() {
     return (
@@ -71,5 +73,3 @@ class Board extends Component {
     );
   }
 }
-
-export default Board
